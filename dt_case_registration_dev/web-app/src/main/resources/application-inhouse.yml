@@ -1,0 +1,45 @@
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@//192.168.0.67:1524/UTILITY
+    username: DPW_DTCR
+    password: jT3$2dP$41
+    platform: oracle
+    tomcat:
+      initial-size: 15
+      max-wait: 30000
+      max-active: 100
+      max-idle: 15
+      min-idle: 10
+      default-auto-commit: true
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: false
+        dialect: org.hibernate.dialect.Oracle10gDialect
+        default-schema: DPW_DTCR
+    hibernate:
+        ddl-auto: none
+        
+wms:
+  fileupload:
+    basepath: F://dpcrUpload
+    maxsize: 10000000  # = 10MB max fIle size
+  defaults:
+    currency: AED
+
+dubaitrade:
+  api:
+    username: dpwtm
+    password: Login345
+    acceess_key: 05a5489b5753a2be7be71bf00f216823ccdaa515
+    url:
+      validate_user_service: https://dtdev.dubaitrade.ae/umwsrest/api/company/v1/validateUserService
+      fetch_company_info: https://dtdev.dubaitrade.ae/umwsrest/api/company/v1/fetchUserCompanyInfo
+  validate:
+    serviceId: 25299642
+    agent-type-code: I
+
+cors:
+  allowed-origins: '*'

@@ -1,0 +1,61 @@
+logging:
+  config: classpath:log4j2-prod.xml
+  
+cors:
+  allowed-origins: https://yms.dpworld.com
+
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@//192.168.0.67:1524/UTILITY
+    username: DPW_DTCR
+    password: jT3$2dP$41
+    platform: oracle
+    tomcat:
+      initial-size: 15
+      max-wait: 30000
+      max-active: 100
+      max-idle: 15
+      min-idle: 10
+      default-auto-commit: true
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: false
+        dialect: org.hibernate.dialect.Oracle10gDialect
+        default-schema: DPW_DTCR
+    hibernate:
+        ddl-auto: none
+        
+wms:
+  fileupload:
+    basepath: /u01/apps/TMWmsUpload
+    maxsize: 20000000 # = 20MB max fIle size
+  defaults:
+    currency: AED # case sensitive, match with value in DB > currency_details > currency_name
+    
+dubaitrade:
+  api:
+    username: dpwtmapiuser
+    password: dpwtm#4@56789
+    acceess_key: 1dd758ba2f24aa74b2179b1a3d510cf7d83173a8
+    url:
+      validate_user_service: https://eservices.dubaitrade.ae/umwsrest/api/company/v1/validateUserService
+      fetch_company_info: https://eservices.dubaitrade.ae/umwsrest/api/company/v1/fetchUserCompanyInfo
+  validate:
+    serviceId: 27726976
+    agent-type-code: I
+    
+dpwms:
+  api:
+    username: DPW_WMS_TM_PRD
+    password: Trade@$o990
+    url:
+      hs_code: https://otmprod-oic-dpwglobalpass.integration.ocp.oraclecloud.com/ic/api/integration/v1/flows/rest/DPW_INT_TM_ITEMS_DTLS/1.0/getData
+      sequence: https://otmprod-oic-dpwglobalpass.integration.ocp.oraclecloud.com/ic/api/integration/v1/flows/rest/DPW_INT_TM_GET_SEQ_IB_OB/1.0/getSequence?name=
+      push_inbound: https://otmprod-oic-dpwglobalpass.integration.ocp.oraclecloud.com/ic/api/integration/v1/flows/rest/DPW_INT_WMS_TM_INBOU_TXN/1.0/create/inventory
+      push_return_goods: https://otmprod-oic-dpwglobalpass.integration.ocp.oraclecloud.com/ic/api/integration/v1/flows/rest/DPW_INT_WMS_TM_GOOD_TXN/1.0/returngoods/inventory
+      push_return_local_goods: https://otmprod-oic-dpwglobalpass.integration.ocp.oraclecloud.com/ic/api/integration/v1/flows/rest/DPW_INT_WMS_TM_RETU_LOCA_GOOD_TX/1.0/returnlocalgoods/inventory
+      push_outbound: https://otmprod-oic-dpwglobalpass.integration.ocp.oraclecloud.com/ic/api/integration/v1/flows/rest/DPW_INT_WMS_TM_OUTBO_TXN/1.0/outbound/inventory
+      push_barcode: https://otmprod-oic-dpwglobalpass.integration.ocp.oraclecloud.com/ic/api/integration/v1/flows/rest/DPW_INT_TM_ITEMS_DTLS/1.0/pushitems

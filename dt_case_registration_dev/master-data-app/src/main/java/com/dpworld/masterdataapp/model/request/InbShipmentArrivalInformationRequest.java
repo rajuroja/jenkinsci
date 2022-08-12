@@ -1,0 +1,94 @@
+package com.dpworld.masterdataapp.model.request;
+
+import java.time.LocalDate;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class InbShipmentArrivalInformationRequest {
+
+	private long id;
+
+	private Integer arrivedFromCountryId;
+
+	private Integer marketTypeId;
+
+	@JsonDeserialize(using = LocalDateDeserializer.class)
+	@JsonSerialize(using = LocalDateSerializer.class)
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
+	private LocalDate arrivalDate;
+
+	private String voyageNumber;
+
+	private String carrier;
+
+	private Byte transportMode; // Pending length
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public Integer getArrivedFromCountryId() {
+		return arrivedFromCountryId;
+	}
+
+	public void setArrivedFromCountryId(Integer arrivedFromCountryId) {
+		this.arrivedFromCountryId = arrivedFromCountryId;
+	}
+
+	public Integer getMarketTypeId() {
+		return marketTypeId;
+	}
+
+	public void setMarketTypeId(Integer marketTypeId) {
+		this.marketTypeId = marketTypeId;
+	}
+
+	public LocalDate getArrivalDate() {
+		return arrivalDate;
+	}
+
+	public void setArrivalDate(LocalDate arrivalDate) {
+		this.arrivalDate = arrivalDate;
+	}
+
+	public String getVoyageNumber() {
+		return voyageNumber;
+	}
+
+	public void setVoyageNumber(String voyageNumber) {
+		this.voyageNumber = voyageNumber;
+	}
+
+	public String getCarrier() {
+		return carrier;
+	}
+
+	public void setCarrier(String carrier) {
+		this.carrier = carrier;
+	}
+
+	public Byte getTransportMode() {
+		return transportMode;
+	}
+
+	public void setTransportMode(Byte transportMode) {
+		this.transportMode = transportMode;
+	}
+
+	@Override
+	public String toString() {
+		return "InbShipmentArrivalInformationRequest [id=" + id + ", arrivedFromCountryId=" + arrivedFromCountryId + ", marketTypeId=" + marketTypeId + ", arrivalDate=" + arrivalDate
+				+ ", voyageNumber=" + voyageNumber + ", carrier=" + carrier + ", transportMode=" + transportMode + "]";
+	}
+
+}

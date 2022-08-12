@@ -1,0 +1,39 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>api-app</artifactId>
+	<parent>
+		<groupId>com.dpworld.dtcr</groupId>
+		<artifactId>dt-case-registration-app</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<dependencies>
+		<dependency>
+			<groupId>com.dpworld.dtcr</groupId>
+			<artifactId>common-app</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.dpworld.dtcr</groupId>
+			<artifactId>master-data-app</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.dpworld.dtcr</groupId>
+			<artifactId>persistence-app</artifactId>
+		</dependency>
+		<!-- JAXB API only -->
+		<dependency>
+			<groupId>jakarta.xml.bind</groupId>
+			<artifactId>jakarta.xml.bind-api</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+
+		<!-- JAXB RI, Jakarta XML Binding -->
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-impl</artifactId>
+			<version>3.0.0</version>
+			<scope>runtime</scope>
+		</dependency>
+	</dependencies>
+</project>
