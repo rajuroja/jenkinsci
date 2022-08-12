@@ -1,0 +1,60 @@
+step1: developpers are writting the code in his local machine by using vs code.
+step2: After developping the code,developpers push into his repository.
+     
+      As soon as Developer push the code into git repository or any scm 
+step3: Coming to the Jenkins,Jenkins CI/CD process in two ways
+       1.CI -->maven,Nexus Repository  CD ----> Apache Tomcat
+       2.by using Docker
+CI: continuous intergration is the process of automating the build and testing the code , when developer push the code to version control system(vcs) or SCM
+
+Benefits of CI:
+      1) CI is image bug detection
+      2) a deployable system at any given point
+      3) Record evaluation of the project
+
+ maven is the buid tool used primarly for java projects . when you run a maven build , the maven automatically downloads all the dependancy jar/war into local repository
+ then will generate the packages like jar/war is called an artifacts.
+
+
+that artifact push into nexus repository to stores the artifacts 
+ Now the artifacts Deploy into the Apache tomcat server 
+
+
+
+By using Docker:
+
+we can write the docker file for base image and copy into the artifacts into target folder location
+
+
+we can build an image by using dockerfile , that image push into the docker registry(public/private) 
+
+
+
+
+
+Configure OpenLDAP Multi-Master Replication on Linux
+Configure LDAP Logging
+Update /etc/hosts
+enable the syncprov module.
+Generate admin password using slappasswd
+Enable Config Replication
+Change the olcServerID on all servers.
+Set a password for configuration database.
+set up the configuration replication on all servers.
+Enable Database Replication
+Setup replication for hdb database.
+while setup repilcation for hdb database facing issue to change the mdb database
+facing issue while setup the databse ldap_sasl_binds
+configuring the libsasl2-modules-gssapiheimdal
+
+
+26-07-2022
+- Learning the document for GitLab CI/CD process
+
+
+I need to communicate with developer for dt_case repository because of that facing some errors while build the repository. can you please provide me
+
+ 
+
+                      
+              	

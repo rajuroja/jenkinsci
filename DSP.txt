@@ -1,0 +1,89 @@
+28-06-2022
+- Created azure pipelines with yaml for build and release 
+- created azure appservice and service connection in azure portal
+29-06-2022
+- R&D on openldap multimaster replication
+- Practicing CICD process
+30-06-2022
+- Setup Rancher to manage the Kubernetes Cluster.
+- Learning cronjobs in Kubernetes Cluster.
+01-07-2022
+- Practicing Helm v2 in Kubernetes Cluster
+- Practicing advanced process of kubernetes ingress network
+04-07-2022
+- verified the process of Kubernetes controller manager
+- Practicing Helm v2 in Kubernetes Cluster
+05-07-2022
+- Had connect with jimit and Dharmang discussed the CI/CD Pipeline with GITLAB
+- R&D on jenkins CI/CD process for java application by using GITLAB
+
+why i am asking means , if we have one or two repositories go for GitLab CI/CD ,if we have multiple repositories go for the jenkins CI/CD process
+
+
+07-07-2022
+- Configured sonarqube and Postgres database in linux server
+- Sonarqube integrated with postgres database
+- analyzing the jenkin cicd process
+ 
+08-07-2022
+- Draw a architecture for jenkins CI/CD process
+- Practicing CICD process
+- Practicing Helm v2 in Kubernetes Cluster 
+11-07-2022
+- Practicing CICD process by using Docker
+- Had connect with Jimit and discussed with Jenkins CI/CD process
+12-07-2022
+- Configured jenkins in linux server
+- Creating jenkin job with freestyle project
+13-07-2022
+- Configuring openldap multimaster replication in linux
+- learning jenkins directory structure
+14-07-2022
+- Created a CICD for java application using maven project 
+- configured the jacoco plugin
+18-07-2022
+-Configured wsl2 on windows
+- Installed ubuntu os on wsl2
+- Configured jenkins in local
+19-07-2022
+- Configured Sonarqube,Nexus repository and Apache Tomcat on local server
+- Took the sample application from git repository
+- Sonarqube,Nexus repository and Apache Tomcat integrating with jenkins
+20-07-2022
+- Done POC for jenkins CICD process
+- Preparing document for jenkins CICD process
+- Had done call with Jimit and Harikrushna regards jenkins CICD workflow
+21-07-2022
+- Prepared document for configured sonarqube,Nexus repository,and Tomcat
+- Preparing document for jenkins CICD process
+ i pinged to dharmang , he said today busy with meetings,he will connect on monday at 12pm 
+22-07-20222
+- Prepared document for jenkins CICD process
+- Verifying the CI/CD process in GitLab
+
+i would request to approve this leave
+
+I will  configure ansible in both servers and write the ansible playbooks as a local system and need to execute Ansible playbooks in another Linux server
+one is taken as ansible controller and remaining one node to execute the playbooks
+
+I can able to login into Git credentials , can you please add in ion team . meanwhile just i pinged to vykunta , he knows about both GitLab CI/CD and Jenkins CI/CD
+
+25-07-2022
+- Prepared Ansible task list plan 
+- Had done call with Jimit and Dharmang regards GitLab CICD workflow
+
+I need to visit the bank in my hometown for some personal work
+I tried to create a new project but unable to create 
+
+can you please create a poc project repository, i can't able to create a new repository. i can able to see only one repository
+
+27-07-2022
+- Configured Docker desktop in my local machine
+- Clone the repository in local server
+- Creating the Dockerfile for dt_cr_frontend
+04-08-2022
+- Had call with Shivangi regards clone the azure repo
+- creating cicd pipeline in GitLab for dt_case repository
+10-08-2022
+- Configured Nodejs and npm for particular version in local machine
+- working on CI/CD pipeline for dt_cr_frontend in GitLab

@@ -1,0 +1,37 @@
+Components of kubernetes:
+ 1) api server: it acts front end for k8s. the users,management devices and cli are talk to api server with k8s cluster.
+ 2) etcd: is a distributed reliable key-value store in k8s cluster.it is responsible for implementing the logs
+ 3) kublet: 
+    scheduler:
+    controller:
+   container run time:
+######
+kubectl get nodes
+kubectl version
+kubectl get nodes -o wide
+kubectl run nginx --image=nginx
+kubectl get pods 
+kubectl describe pod <pod name>
+To create a deployment using imperative command, use kubectl create:
+
+kubectl create deployment nginx --image=nginx
+Kubernetes Concepts – https://kubernetes.io/docs/concepts/
+
+Pod Overview- https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/
+
+kubectl replace -f replicaset.yml
+kubectl scale --replica=6 -f replicaset.yml
+kubectl scale --replica=6 replicaset myapp-replicaset
+kubectl get rs myapp-replicaset -o yaml > myapp-replicaset.yaml 
+kubectl set image deployment/myapp-deployment /nginx=nginx:1.17.1
+
+
+
+
+
+
+
+pipeline:
+---------
+A pipeline is a concept that introduces a series of events or tasks that are connected in a sequence to make quick software releases
+Continuous Integration is a practice that integrates code into a shared repository.
